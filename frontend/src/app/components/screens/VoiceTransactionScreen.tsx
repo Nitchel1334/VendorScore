@@ -19,9 +19,9 @@ export function VoiceTransactionScreen({ navigate }: Props) {
   const [formData, setFormData] = useState({
     type: "Sale",
     product: "",
-    quantity: 1,
+    quantity: 1 as number | string,
     unit: "kg",
-    amount: 0,
+    amount: 0 as number | string,
     payment_mode: "Cash",
   });
   

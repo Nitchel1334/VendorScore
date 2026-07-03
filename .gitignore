@@ -1,0 +1,59 @@
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Python / Backend
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+backend/venv/
+venv/
+env/
+.env
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+backend.log
+*.log
+
+# Database
+*.db
+*.sqlite3
+
+# Audio Files (Test artifacts)
+*.wav
+*.webm
+*.mp3
+*.ogg
+
+# Node / Frontend
+node_modules/
+.next/
+out/
+build/
+dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# AI Model Caches / Checkpoints
+.huggingface/
+.cache/
+models/
+
+# IDE / Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Miscellaneous
+coverage/
+.nyc_output/

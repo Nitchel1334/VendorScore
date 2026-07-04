@@ -7,17 +7,17 @@ pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 def seed():
     db = SessionLocal()
-    existing_admin = db.query(Admin).filter(Admin.email == "admin@vendordash.com").first()
+    existing_admin = db.query(Admin).filter(Admin.email == "admin@vendorscore.com").first()
     if not existing_admin:
         hashed_pw = pwd_context.hash("admin123")
         admin = Admin(
-            email="admin@vendordash.com",
+            email="admin@vendorscore.com",
             password_hash=hashed_pw,
             role=AdminRole.ADMIN
         )
         db.add(admin)
         db.commit()
-        print("Admin user created: admin@vendordash.com / admin123")
+        print("Admin user created: admin@vendorscore.com / admin123")
     else:
         print("Admin user already exists.")
     db.close()

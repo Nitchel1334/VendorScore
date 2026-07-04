@@ -11,13 +11,13 @@ RUN apt-get update && apt-get install -y \
     libpq-dev \
     && rm -rf /var/lib/apt/lists/*
 
-COPY backend/requirements.txt .
+COPY requirements.txt .
 
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
-RUN pip install --no-cache-dir faster-whisper llama-cpp-python python-multipart pydub huggingface_hub
+RUN pip install --no-cache-dir faster-whisper llama-cpp-python python-multipart pydub huggingface_hub psycopg2-binary
 
-COPY backend/ .
+COPY . .
 
 EXPOSE 8000
 
